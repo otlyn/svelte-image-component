@@ -27,31 +27,6 @@ Compiles to this:
 />
 ```
 
-## Alt Fallback
-
-The `alt` attribute should always be filled out, but if it's not it will default to the file name. The following:
-
-<!-- prettier-ignore -->
-```html
-<Image src="image.jpg" />
-```
-
-Compiles to this:
-
-```html
-<img
-  src="images/image@md.jpg"
-  srcset="
-    images/image@xs.jpg  150w,
-    images/image@sm.jpg  300w,
-    images/image@md.jpg  600w,
-    images/image@lg.jpg 1200w,
-    images/image@xl.jpg 2400w
-  "
-  alt="image"
-/>
-```
-
 ## Specify size for best optimization
 
 The options are `sm`, `md`, `lg`, and should be written like so:
@@ -104,6 +79,31 @@ These will compile to:
 - Use `lg` for full width images.
 - Use `md` for images smaller than 100% page width.
 - Use `sm` for images smaller than 50% page width.
+
+## Alt Fallback
+
+The `alt` attribute should always be filled out, but if it's not it will default to the file name. The following:
+
+<!-- prettier-ignore -->
+```html
+<Image src="image.jpg" />
+```
+
+Compiles to this:
+
+```html
+<img
+  src="images/image@md.jpg"
+  srcset="
+    images/image@xs.jpg  150w,
+    images/image@sm.jpg  300w,
+    images/image@md.jpg  600w,
+    images/image@lg.jpg 1200w,
+    images/image@xl.jpg 2400w
+  "
+  alt="image"
+/>
+```
 
 ## Placeholder images (coming soon...)
 
