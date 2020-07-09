@@ -3,11 +3,16 @@
 </script>
 
 <!-- The "src" path is relative to public/images/ -->
-<Image src="image" alt="Description" />
 
-<!-- Placeholder images -->
+<Image src="image.png" alt="Description" size="lg" />
+
+<!-- Placeholder images
 <Image landscape={true} />
 
 <Image portrait={true} />
 
-<Image square={true} />
+<Image square={true} /> -->
+
+<style>
+
+</style>
