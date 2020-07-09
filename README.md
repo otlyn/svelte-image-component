@@ -99,6 +99,12 @@ These will compile to:
 />
 ```
 
+### Sizing Suggestions
+
+- Use `lg` for full width images.
+- Use `md` for images smaller than 100% page width.
+- Use `sm` for images smaller than 50% page width.
+
 ## Placeholder images (coming soon...)
 
 There are three placeholder image options:
