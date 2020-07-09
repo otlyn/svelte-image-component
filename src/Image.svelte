@@ -6,7 +6,7 @@
   export let src;
   export let size;
   export let sizes;
-  export let alt = fileName;
+  export let alt = src.split(".").shift();
 
   // "image.jpg" => ["image", "jpg"]
   const nameSplit = src.split(".");

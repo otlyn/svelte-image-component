@@ -4,7 +4,7 @@
 
 <!-- The "src" path is relative to public/images/ -->
 
-<Image src="image.png" alt="Description" size="lg" />
+<Image src="image.png" size="lg" />
 
 <!-- Placeholder images
 <Image landscape={true} />
