@@ -6,6 +6,7 @@
   export let src;
   export let size;
   export let sizes;
+  export let className;
   export let alt = src.split(".").shift();
 
   // "image.jpg" => ["image", "jpg"]
@@ -28,16 +29,21 @@
 </script>
 
 {#if size == 'sm'}
-  <img src={sm} srcset="{xs}, {sm}, {md}" {sizes} {alt} />
+  <img src={sm} srcset="{xs}, {sm}, {md}" {sizes} {alt} class={className} />
 
 {:else if size == 'md'}
-  <img src={md} srcset="{sm}, {md}, {lg}" {sizes} {alt} />
+  <img src={md} srcset="{sm}, {md}, {lg}" {sizes} {alt} class={className} />
 
 {:else if size == 'lg'}
-  <img src={lg} srcset="{md}, {lg}, {xl}" {sizes} {alt} />
+  <img src={lg} srcset="{md}, {lg}, {xl}" {sizes} {alt} class={className} />
 
 {:else}
-  <img src={md} srcset="{xs}, {sm}, {md}, {lg}, {xl}" {sizes} {alt} />
+  <img
+    src={md}
+    srcset="{xs}, {sm}, {md}, {lg}, {xl}"
+    {sizes}
+    {alt}
+    class={className} />
 {/if}
 
 <style>
